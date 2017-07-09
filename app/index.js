@@ -51,17 +51,44 @@ Arrow Functions
   the this of the global object
 */
 
-this.a = 25;
-let print = () => {
-  console.log(this.a);
-};
-
-print();
-
-let arrowPrint = () => {
-  console.log(this.a);
-};
-
-arrowPrint();
+// this.a = 25;
+// let print = () => {
+//   console.log(this.a);
+// };
+//
+// print();
+//
+// let arrowPrint = () => {
+//   console.log(this.a);
+// };
+//
+// arrowPrint();
 
 //Cannot set property 'a' of undefined
+
+/*
+  Arrow functions in the map method
+*/
+
+// let points = [10, 20, 30];
+//
+//
+// points = points.map(element => {
+//   return element + 1;
+// });
+// console.log(points);
+
+/*
+  Filter method
+  -> reduces the array based on some test
+*/
+
+// let isPassing = (grade) => {
+//   return grade >= 70;
+// };
+
+let scores = [90, 85, 67, 71, 70, 55, 92];
+
+let passing = scores.filter(score => score >= 70);
+
+console.log(passing);
